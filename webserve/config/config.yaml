@@ -1,0 +1,96 @@
+servers:
+  - listen:
+    server_name: youssef
+    port: 8081
+    host: 127.0.0.1
+    root: ./www/
+    client_max_body_size: 2g
+    error_pages:
+      - 400: ./error_pages/400.html
+      - 500: ./error_pages/500.html
+
+    locations:
+      - path: /loc
+        root: ./www
+        upload_path: ./Srcs/upload/
+        upload: ON
+        autoindex: ON
+        methods: [GET, POST]
+        cgi_paths:
+          - [.py, /usr/bin/python3]
+          - [.sh, /usr/bin/sh]
+
+      - path: /loc1
+        root: ./www
+        upload: ON
+        methods: [GET, POST]
+        upload_path: ./Srcs/upload/
+        autoindex: ON
+        index: [submit.php]
+        cgi_paths:
+          - [.py, /usr/bin/python3]
+          - [.php, /usr/bin/php-cgi]
+          - [.php, /usr/bin/php-cgi]
+        # return: http://www.google.com
+
+  - listen:
+    server_name: zineb
+    port: 8081
+    host: localhost
+    root: ./www/
+    client_max_body_size: 2g
+    error_pages:
+      - 404: ./error_pages/404.html
+      - 500: ./error_pages/500.html
+
+    locations:
+      - path: loc2
+        root: ./www
+        upload_path: ./Srcs/upload/
+        autoindex: ON
+        upload: OFF
+        methods: [POST]
+        index: [submit.php]
+        cgi_paths:
+          - [.php, /usr/bin/php-cgi]
+
+      - path: loc3
+        root: ./www
+        upload_path: ./Srcs/upload/
+        autoindex: ON
+        upload: OFF
+        methods: [POST]
+        index: [submit.php]
+        cgi_paths:
+          - [.php, /usr/bin/php-cgi]
+
+  - listen:
+    server_name: yousra
+    port: 8081
+    host: 127.0.0.1
+    root: ./www/
+    client_max_body_size: 2g
+    error_pages:
+      - 404: ./error_pages/404.html
+      - 500: ./error_pages/500.html
+
+    locations:
+      - path: loc4
+        root: ./www
+        upload_path: ./Srcs/upload/
+        autoindex: OFF
+        upload: OFF
+        methods: [POST]
+        index: [submit.php]
+        cgi_paths:
+          - [.php, /usr/bin/php-cgi]
+
+      - path: loc5
+        root: ./www
+        upload_path: ./Srcs/upload/
+        autoindex: OFF
+        upload: OFF
+        methods: [POST]
+        index: [submit.php]
+        cgi_paths:
+          - [.php, /usr/bin/php-cgi]
