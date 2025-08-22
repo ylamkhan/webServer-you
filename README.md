@@ -253,3 +253,26 @@ webserver/
 - [CGI Specification (RFC 3875)](https://tools.ietf.org/html/rfc3875)
 - [NGINX Configuration Guide](https://nginx.org/en/docs/)
 - [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/)
+  
+---
+
+## Authors
+
+[Your Name] - Python & Data Science Student - YourGithub
+
+Acknowledgments
+
+1337 School - Educational methodology and project structure
+Teaching Staff - Guidance and mentorship
+Peer Students - Collaboration and code reviews
+Open Source Community - Libraries and tools used
+
+
+Project Duration: 4 Months intensive
+Completion Rate: 100% (All modules completed)
+Final Grade: ⭐⭐⭐ (Excellent)
+Skills Acquired: C++, Data Stracture, Http ...
+License
+This project is part of the 1337 School curriculum and is intended for educational purposes only. Code examples and projects are available under the MIT License for learning purposes.
+
+Crafted with 🐍 C++ during the 1337 School Webserver
